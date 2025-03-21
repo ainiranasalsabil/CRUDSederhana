@@ -19,3 +19,22 @@ namespace CRUDSederhana
         {
             InitializeComponent();
         }
+        //Memastikan DataGridView (dgvMahasiswa) langsung menampilkan data yang ada di database
+        private void Form1_Load_1(object sender, EventArgs e)
+        {
+            LoadData();
+        }
+
+        // Fungsi untuk mengosongkan semua input pada TextBox
+        private void ClearForm()
+        {
+            txtNIM.Clear();
+            txtNama.Clear();
+            txtEmail.Clear();
+            txtTelepon.Clear();
+            txtAlamat.Clear();
+
+            //Fokus kembali ke NIM agar user siap memasukkan data baru
+            txtNIM.Focus();
+        }
+
